@@ -1,85 +1,8 @@
-// import React from "react";
-// import { NavLink, Link } from "react-router-dom";
-// import { useAuthStore } from "../store/useAuthStore";
-// import { LogOut, Settings, User } from "lucide-react";
 
-// const Navbar = () => {
-//   const { logout, authUser } = useAuthStore();
-//   const getNavLinkClass = ({ isActive }) => {
-//     const baseClasses =
-//       "btn btn-sm btn-ghost hover:text-[#07deda] gap-2 transition-colors";
-//     const activeClasses = "text-[#07deda]";
-//     const inactiveClasses = "text-white";
-
-//     return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-//   };
-
-//   return (
-//     <header
-//       className="
-//                 fixed top-4 left-4 right-4 z-40 
-//                 bg-black/30 backdrop-blur-lg 
-//                 border border-gray-500/30
-//                 rounded-2xl
-//             "
-//     >
-//       <div className="container mx-auto px-4 h-16">
-//         <div className="flex items-center justify-between h-full">
-//           {/* Logo and App Name */}
-//           <div className="flex items-center gap-8">
-//             <Link
-//               to="/"
-//               className="flex items-center gap-2.5 hover:opacity-80 transition-all"
-//             >
-//               <img
-//                 src="https://firebasestorage.googleapis.com/v0/b/gemini-canvas-prod.appspot.com/o/us-central1%3A01a0e132-710e-4422-bffc-389748575c0d?alt=media&token=48927e1f-4999-4c17-814c-83b68071e626"
-//                 alt="EchoChat Logo"
-//                 className="w-9 h-9"
-// 								onError={(e) => {
-// 									e.currentTarget.onerror = null; // prevents looping
-// 									e.currentTarget.src = "https://placehold.co/36x36/111827/FFFFFF?text=E";
-// 								}}
-//               />
-//               <h1 className="text-lg font-bold text-white">EchoChat</h1>
-//             </Link>
-//           </div>
-
-//           {/* Action Buttons */}
-//           <div className="flex items-center gap-2 text-white">
-//             <NavLink to={"/setting"} className={getNavLinkClass}>
-//               <Settings className="w-4 h-4 " />
-//               <span className="hidden sm:inline">Settings</span>
-//             </NavLink>
-
-//             {authUser && (
-//               <>
-//                 <NavLink to={"/profile"} className={getNavLinkClass}>
-//                   <User className="size-5" />
-//                   <span className="hidden sm:inline ">Profile</span>
-//                 </NavLink>
-
-//                 <div className="hover:text-[#07deda]">
-//                   <button
-//                     className="btn btn-sm btn-ghost flex gap-2 items-center hover:text-[#07deda]"
-//                     onClick={logout}
-//                   >
-//                     <LogOut className="size-5 " />
-//                     <span className="hidden sm:inline ">Logout</span>
-//                   </button>
-//                 </div>
-//               </>
-//             )}
-//           </div>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// };
-// export default Navbar;
 
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { useAuthStore } from "../store/useAuthStore";
+import { useAuthStore } from "../store/useAuthStore.js";
 import { LogOut, Settings, User } from "lucide-react";
 
 const Navbar = () => {

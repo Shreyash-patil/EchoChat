@@ -1,8 +1,8 @@
 
 import React, { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useAuthStore } from "./store/useAuthStore";
-import { useThemeStore } from "./store/useThemeStore";
+import { useAuthStore } from "./store/useAuthStore.js";
+import { useThemeStore } from "./store/useThemeStore.js";
 import { Loader } from "lucide-react";
 import Lottie from "lottie-react";
 import SuccessIcon from "./animations/SuccessIcon.json";
@@ -10,14 +10,14 @@ import FailedIcon from "./animations/FailedIcon.json";
 import { Toaster } from "react-hot-toast";
 
 // Components
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 
 // Pages
-import HomePage from "./pages/HomePage";
-import SignupPage from "./pages/SignupPage";
-import SettingPage from "./pages/SettingPage";
-import ProfilePage from "./pages/ProfilePage";
-import LoginPage from "./pages/LoginPage";
+import HomePage from "./pages/HomePage.jsx";
+import SignupPage from "./pages/SignupPage.jsx";
+import SettingPage from "./pages/SettingPage.jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
 
 /**
  * This component is now defined outside of App to prevent re-declaration on every render.

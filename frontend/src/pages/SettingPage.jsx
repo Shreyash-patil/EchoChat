@@ -1,7 +1,7 @@
 import React from "react";
 import { THEMES } from "../constants";
-import { useThemeStore } from "../store/useThemeStore";
-import { useAuthStore } from "../store/useAuthStore";
+import { useThemeStore } from "../store/useThemeStore.js";
+import { useAuthStore } from "../store/useAuthStore.js";
 import { Send, ShieldAlert, Trash2 } from "lucide-react";
 import { useState } from "react";
 
