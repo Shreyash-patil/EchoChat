@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+   themes: all;
+ }
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden; /* This prevents the main window scrollbar */
+}
+  
+
+ /* Add this inside your main CSS file (e.g., index.css or globals.css)
+  It should be placed after your @tailwind and @plugin directives.
+*/
+@layer base {
+  [data-theme="glassmorphism"] {
+    /* Primary and Accent Colors (Teal) */
+    --p: #07deda; /* primary */
+    --pc: #000000; /* primary-content */
+    --s: #06b4b0; /* secondary */
+    --sc: #000000; /* secondary-content */
+    --a: #07deda; /* accent */
+    --ac: #000000; /* accent-content */
+    
+    /* Neutral Color */
+    --n: #1f2937; /* neutral */
+    --nc: #d1d5db; /* neutral-content */
+
+    /* Base Background Colors (The key to the glass effect) */
+    /* These are semi-transparent to allow the backdrop-filter to work */
+    --b1: rgba(15, 23, 42, 0.3);  /* base-100 */
+    --b2: rgba(15, 23, 42, 0.5);  /* base-200 */
+    --b3: rgba(30, 41, 59, 0.5);  /* base-300 */
+    --bc: #ffffff; /* base-content (text color) */
+
+    /* Info, Success, Warning, Error Colors */
+    --inf: #2094f3;
+    --suc: #00ff4c;
+    --war: #ff9900;
+    --err: #ff5724;
+
+    /* Other variables */
+    --rounded-box: 1rem; /* Default border radius */
+    --rounded-btn: 0.5rem; /* Border radius for buttons */
+    --rounded-badge: 1.9rem; /* Border radius for badges */
+    --tab-border: 1px;
+    --tab-radius: 0.5rem;
+  }
+}
+
+
+
+/* Define your custom animation and keyframes using @theme */
+@theme {
+  --animate-shine: shine var(--shine-duration, 5s) linear infinite;
+
+  @keyframes shine {
+    0% { background-position: 100% }
+    100% { background-position: -100% }
+  }
+}
+

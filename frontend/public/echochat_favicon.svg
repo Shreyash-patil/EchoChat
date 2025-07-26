@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoChat Favicon Preview</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            height: 100vh;
+            margin: 0;
+            background-color: #111827;
+            font-family: sans-serif;
+            color: white;
+        }
+        .preview-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: #333;
+            border-radius: 8px;
+        }
+        svg {
+            width: 32px; /* Preview size */
+            height: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <!-- This is your SVG favicon -->
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#07deda;" />
+                    <stop offset="100%" style="stop-color:#06b4b0;" />
+                </linearGradient>
+            </defs>
+            <!-- Simplified "C" shape chat bubble -->
+            <path d="M 85,15 a 35,35 0 1,0 0,70 l 0,-10 a 25,25 0 1,1 0,-50 l 0,-10 z" fill="url(#iconGradient)" />
+            <!-- Simplified "E" shape cutout -->
+            <rect x="35" y="45" width="35" height="10" fill="#111827" />
+        </svg>
+        <span>EchoChat Favicon</span>
+    </div>
+
+    <p>You can copy the SVG code and save it as `favicon.svg`</p>
+
+</body>
+</html>
