@@ -13,7 +13,8 @@ const userSocketMap = {}; //userId:socket.id
 
 const io = new Server(SocketServer, {
   cors: {
-    origin: ["http://localhost:5173"],
+    origin: [process.env.CLIENT_URL],
+    methods: ["GET", "POST"],
   },
 });
 
