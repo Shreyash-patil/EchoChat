@@ -2,7 +2,7 @@ import { Server } from "socket.io";
 import express from "express";
 import http from "http";
 
-const CLIENT_URL = "http://localhost:5173";
+
 const app = express();
 const SocketServer = http.createServer(app);
 
@@ -13,7 +13,7 @@ const userSocketMap = {}; //userId:socket.id
 
 const io = new Server(SocketServer, {
   cors: {
-    origin: [CLIENT_URL],
+    origin: ["http://localhost:5173"],
   },
 });
 
