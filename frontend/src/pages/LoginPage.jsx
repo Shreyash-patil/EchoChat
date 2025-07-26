@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import ShaderBackground from "../components/lightswind/shader-background.tsx";
+import ShaderBackground from "../components/lightswind/shader-background.jsx";
 import { useAuthStore } from "../store/useAuthStore.js";
 import { Eye, EyeOff, Loader2, Lock, Mail, User } from "lucide-react";
 import { Link } from "react-router-dom";
