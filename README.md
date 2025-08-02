@@ -61,7 +61,7 @@ A **real-time chat application** built with the MERN stack and Socket.io, featur
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/your-username/echochat.git
+   git clone https://github.com/Shreyash-patil/echochat.git
    cd echochat
 2. **Install dependencies**
 - 2.1 Backend dependencies
